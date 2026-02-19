@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ithaka-frontend
+  labels:
+    app: ithaka-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ithaka-frontend
+  template:
+    metadata:
+      labels:
+        app: ithaka-frontend
+    spec:
+      containers:
+        - name: ithaka-frontend
+          image: adjemiangerman/ithaka-frontend:1.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
