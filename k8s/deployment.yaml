@@ -20,3 +20,9 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
+          resources:
+            requests:
+              ephemeral-storage: "3Gi"
+            limits:
+              ephemeral-storage: "6Gi"
+        
