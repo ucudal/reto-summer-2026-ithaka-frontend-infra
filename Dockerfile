@@ -5,7 +5,7 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y git
 
-RUN git clone https://github.com/ucudal/reto-summer-2026-ithaka-frontend.git .
+RUN git clone https://github.com/ucudal/reto-summer-2026-ithaka-frontend.git . && git checkout <commit-hash>
 
 RUN npm install --legacy-peer-deps
 
